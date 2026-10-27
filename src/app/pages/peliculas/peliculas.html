@@ -1,0 +1,28 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>Titulo</th>
+            <th>Genero</th>
+            <th>Duracion</th>
+            <th>Año</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for ( peliculas of mensajes | async; track $index) {
+        <tr>
+            <td>{{peliculas.titulo}}</td>
+            <td>{{peliculas.genero}}</td>
+            <td>{{peliculas.duracion}}</td>
+            <td>{{peliculas.anio}}</td>
+            <td>
+                <button type="submit">Agregar</button>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+<br>
+<br>
+
+<button (click)="cerrar()" class="btn btn-secondary">Cerrar</button>
